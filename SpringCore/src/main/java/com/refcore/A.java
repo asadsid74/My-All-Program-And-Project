@@ -1,7 +1,7 @@
 package com.refcore;
 
 public class A {
-
+//that is the entity class
 	private int x;
 	private B ob;
 	public int getX() {
