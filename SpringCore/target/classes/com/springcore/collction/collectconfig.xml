@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://www.springframework.org/schema/beans
+ http://www.springframework.org/schema/beans/spring-beans.xsd">
+ 
+ <!-- more bean definitions go here -->
+ 
+ <bean name="Student1" class="com.springcore.collction.Student">
+ <property name="name" value="Shahrukh khan"></property>
+ 
+ <property name="phone_no">
+ <list>
+ <value>98376278</value>
+ <value>345678</value>
+ <value>345678</value>
+ <value>345678</value>
+ <value>098765</value>
+ <value>98098765</value>
+ <value>983098768</value>
+ <value>   </value>
+ </list>
+ </property>
+ 
+ <property name="address">
+ <set>
+ <value>utter pradesh</value>
+ <value>himanchal pradesh</value>
+ <value>arunachal pradesh</value>
+ <value>arunachal pradesh</value>
+ <value>Delhi</value>
+  <value>Delhi</value>
+ <value>Maharstra</value>
+ 
+ </set>
+ </property>
+ 
+ <property name="courses">
+ <map>
+ 	<entry key="java programmming" value="2.5 month" />
+ 	<entry key="c programmming" value="1.00 month" />
+ 	<entry key="c++ programmming" value="1.2 month" />
+ 	<entry key="python programmming" value="3.3 month" />
+ 	<entry key="php programmming" value="2.2 month" />
+ </map>
+ </property>
+ 
+ </bean>
+</beans>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xmlns:context="http://www.springframework.org/schema/context"
+
+ xsi:schemaLocation="http://www.springframework.org/schema/beans
+ 
+ http://www.springframework.org/schema/beans/spring-beans.xsd
+ 
+  http://www.springframework.org/schema/context 
+  http://www.springframework.org/schema/context/spring-context.xsd">
+ <context:annotation-config />
+ 
+ <!-- 
+
+	<bean class="com.springcore.autowire.annotation.Address" name="address">
+		<property name="address" value="maharastra" />
+		<property name="street" value="andheri east" />
+	</bean>
+	
+	<bean class="com.springcore.autowire.annotation.Address" name="address1">
+		<property name="address" value="delhi" />
+		<property name="street" value="andheri " />
+	</bean>
+	
+	<bean class="com.springcore.autowire.annotation.Address" name="address2">
+		<property name="address" value="ghatkoper" />
+		<property name="street" value="sakinkaa " />
+	</bean>
+	
+	
+	<bean class="com.springcore.autowire.annotation.Address" name="address3">
+		<property name="address" value="mumbai" />
+		<property name="street" value="kurla " />
+	</bean>
+	<bean class="com.springcore.autowire.annotation.Emp" name="emp1"> -->
+	<!-- <property name="address" ref="address"></property> -->
+
+ <context:component-scan base-package="com.springcore.autowire.annotation"></context:component-scan>
+ <!-- </bean> -->
+</beans>

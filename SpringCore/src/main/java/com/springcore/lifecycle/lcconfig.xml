@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+ http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- more bean definitions go here -->
+<!-- 
+	<bean class="com.springcore.lifecycle.Shopkeaper" name="skeper"
+		init-method="initmethod" destroy-method="destroymethod">
+		<property name="rinPrice" value="10" />
+	</bean>
+	<bean class="com.springcore.lifecycle.Kiranastore" name="kirana">
+		<property name="sugar" value="40"></property>
+
+	</bean> -->
+	<bean class="com.springcore.lifecycle.Examplee" name="exm">
+
+<property name="subject" value="Science"></property>	
+	</bean>
+
+</beans>
