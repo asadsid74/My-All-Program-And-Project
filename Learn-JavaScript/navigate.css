@@ -1,0 +1,29 @@
+ul{
+    height: 20px;
+    margin: 0%;
+    padding: 0%;
+    list-style: square;
+    height: 40px;
+    background-color: rgba(11, 8, 17, 0.829);
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    }
+
+   
+    a{
+        display: block;
+        padding-left: 28px;
+        color: rgb(0, 149, 142);
+        text-decoration: darkblue;
+    }
+
+    a:hover{
+    background-color: rgba(231, 232, 245, 0.904);
+    }
+
+    .item{
+        display: flex;
+    }
+    .pad{
+        margin: 7px;
+    }

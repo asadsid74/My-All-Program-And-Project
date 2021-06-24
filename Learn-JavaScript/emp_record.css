@@ -1,0 +1,24 @@
+h3{
+    font-family: Calibri; 
+    font-size: 40pt;         
+    font-style: normal; 
+    font-weight: italic; 
+    color:rgb(255, 9, 40);
+    text-align: center; 
+    text-decoration: rgb(0, 0, 0)
+  }
+  
+  table{
+    font-family: Calibri; 
+    color:rgb(255, 255, 255); 
+    font-size: 30pt; 
+    font-style: black;
+    font-weight: bold;
+    text-align:; 
+    background-color: rgb(10, 005, 70); 
+    border-collapse: collapse; 
+    border: 2px solid rgba(19, 0, 128, 0.013)
+  }
+  table.inner{
+    border: 0px
+  }

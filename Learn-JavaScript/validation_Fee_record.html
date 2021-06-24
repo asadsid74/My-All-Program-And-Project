@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+    <style>
+        .container {
+            width: 27%;
+            border: 3px solid black;
+            margin: auto;
+            padding: 70px;
+            font-size: 20px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <table style="text-align: center;">
+            <form name="myform" method="post" onsubmit="return validateform()">
+                <table>
+                    <h2>Student Fees Record</h2>
+
+                    <tr>
+                        <td>Student ID:</td>
+                        <td><input type="text" name="sid" id="sid"><br>
+                            <span style="color: red;" id="studentid"></span>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Student Name:</td>
+                        <td><input type="text" name="sname" id="sname"> <br>
+                            <span style="color: red;" id="studentname"></span>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Parent Name:</td>
+                        <td><input type="text" name="pname" id="pname"><br>
+                            <span style="color: red;" id="parentname"></span>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Select Course:</td>
+                        <td><select name="" id="subject">
+                                <option value="Courses">Courses</option>
+                                <option>core java</option>
+                                <option>python</option>
+                                <option>jsp</option>
+                                <option>servlet</option>
+                            </select><br><span style="color: red;" id="courseError"></span></td>
+                    </tr>
+
+                    <tr>
+                        <td>Select Duration:</td>
+                        <td><select select name="" id="subject1">
+                                <option value="Duration">Duration</option>
+                                <optio>Jan-March</option>
+                                    <option>April-June</option>
+                                    <option>July-Septemper</option>
+                                    <option>October-November</option>
+                            </select><br><span style="color: red;" id="durationError"></span></td>
+                    </tr>
+
+                    <tr>
+                        <td>Total Fees:</td>
+                        <td><input type="text" name="tfees" id="tfees"><br>
+                            <span style="color: red;" id="totalfees"></span>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Paid Fees:</td>
+                        <td><input type="text" name="pfees" id="pfees"><br>
+                            <span style="color: rgb(76, 0, 255);" id="paidfees"></span>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Remain Fees:</td>
+                        <td><input type="text" name="rfees" id="rfees">
+                            <span style="color: red;" id="remainfees"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="submit" value="submit" />
+                        </td>
+                    </tr>
+                </table>
+            </form>
+            <script>
+                function validateform() {
+
+                    var sid = document.getElementById('sid').value;
+                    var sname = document.getElementById('sname').value;
+                    var pname = document.getElementById('pname').value;
+                    var tfees = document.getElementById('tfees').value;
+                    var pfees = document.getElementById('pfees').value;
+                    var rfees = document.tfees+pfees;
+                    var select = document.getElementById('subject').value;
+                    var select1 = document.getElementById('subject1').value;
+
+
+                    var userID = /^[0-9]{1,10}$/;//here 0 to 9 bcz ery id under be 0 to 9 and here{1,10} it's limit
+                    var chekfees = /^[0-9]{1,10}$/;
+                    var userCheck = /^[a-zA-z]{1,30}[a-zA-z    ]{1,30}$/;
+                    if (userID.test(sid)) {
+                        document.getElementById('studentid').innerHTML = "";
+                    }
+                    else {
+                        document.getElementById('studentid').innerHTML = "Invalid Id";
+                        return false;
+                    }
+                    if (userCheck.test(sname)) {
+                        document.getElementById('studentname').innerHTML = "";
+                    }
+                    else {
+                        document.getElementById('studentname').innerHTML = "Invalid Name";
+                        return false;
+                    }
+                    if (userCheck.test(pname)) {
+                        document.getElementById('parentname').innerHTML = "";
+                    }
+                    else {
+                        document.getElementById('parentname').innerHTML = "Invalid name";
+                        return false;
+                    }
+                    if (select == "Courses") {
+                        document.getElementById('courseError').innerHTML = "Choose Course";
+                        return false;
+                    }
+                    else {
+                        document.getElementById('courseError').innerHTML = "";
+                    }
+                    if (select1 == 'Duration') {
+                        document.getElementById('durationError').innerHTML = "Choose Duration";
+                        return false;
+                    } else {
+                        document.getElementById('durationError').innerHTML = "";
+                    }
+                    if (chekfees.test(tfees)) {
+                        document.getElementById('totalfees').innerHTML = "";
+                    }
+                    else {
+                        document.getElementById('totalfees').innerHTML = "Invalid Number";
+                        return false;
+                    }
+                    if (chekfees.test(pfees)) {
+                        document.getElementById('paidfees').innerHTML = "";
+                    }
+                    else {
+                        document.getElementById('paidfees').innerHTML = "Invalid Number";
+                        return false;
+                    }
+
+
+
+
+
+                }
+
+            </script>
+
+    </div>
+</body>
+
+</html>

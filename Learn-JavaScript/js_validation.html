@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Regisration form></form>
+    </title>
+</head>
+
+<body>
+
+    <h1>this is my first program</h1>
+    <form action="myForm" method="post" onsubmit="return asadForm()">
+        <table>
+            <tr>
+                <td>EmployeeId</td>
+                <td> <input type="text" name="eid" id="eid" ></td>
+                <span style="color:darkred" id="Emp_id"></span>
+            </tr>
+
+            <tr>
+                <td>EmployeeName</td>
+                <td> <input type="text" name="e_name1" id="e_name"></td>
+                <span style="color:darkred" id="Emp_name"></span>
+            </tr>
+
+            <tr>
+                <td>EmployeeAddress</td>
+                <td> <input type="text" name="e_address" id="e_address"></td>
+                <span style="color:darkred" id="Emp_address"></span>
+            </tr>
+
+            <tr>
+                <td>EmployeeMo_no</td>
+                <td> <input type="text" name="mo_no" id="mo_no"></td>
+                <span style="color:darkred" id="Emp_mo_no"></span>
+            </tr>
+
+            <tr>
+                <td>EmployeeSalary</td>
+                <td> <input type="text" name="e_salary" id="e_salary"></td>
+                <span style="color:darkred" id="Emp_salary"></span>
+            </tr>
+
+            <tr>
+                <td>EmployeeRole</td>
+                <td> <input type="text" name="e_role" id="e_role"></td>
+                <span style="color:darkred" id="Emp_role"></span>
+            </tr>
+
+            <td>
+                <input type="submit" value="submit" />
+            </td>
+        </table>
+
+    </form>
+
+    <script>
+
+        function asadForm() {
+            var empid = document.getElementById('eid').value;
+            var ename = document.getElementById('e_name').value;
+            var e_address = document.getElementById('e_address').value;
+            var mo_no = document.getElementById('mo_no').value;
+            var e_salary = document.getElementById('e_salary').value;
+            var e_role = document.getElementById('e_role').value;
+
+
+            var employeeID = /^[0-9]{1,10}$/;
+
+            var employeeeName = /^[a-zA-z]{1,30}[a-zA-z    ]{1,30}$/;
+            if (employeeID.test(empid)) {
+                document.getElementById('Emp_id').innerHTML = "";
+            } else {
+                document.getElementById("Emp_id").innerHTML = "Invalid id";
+                return false;
+            }
+
+            if (employeeeName.test(ename)) {
+                document.getElementById('Emp_name').innerHTML = "";
+            } else {
+                document.getElementById('Emp_name').innerHTML = "Invalid name";
+                return false;
+
+            }
+
+            if (employeeeName.test(e_address)) {
+                document.getElementById('Emp_address').innerHTML = "";
+            } else {
+                document.getElementById('Emp_address').innerHTML = "Invalid Address";
+                return false;
+
+            }
+
+            if (employeeID.test(mo_no)) {
+                document.getElementById('Emp_mo_no').innerHTML = "";
+            } else {
+                document.getElementById('Emp_mo_no').innerHTML = "Invalid Mobile number";
+                return false;
+
+            }
+
+            if (employeeID.test(e_salary)) {
+                document.getElementById('Emp_salary').innerHTML = "";
+            } else {
+                document.getElementById('Emp_salary').innerHTML = "Please fill** ";
+                return false;
+
+            }
+
+            if (employeeeName.test(e_role)) {
+                document.getElementById('Emp_role').innerHTML = "";
+            } else {
+                document.getElementById('Emp_role').innerHTML = "Please! fill** ";
+                return false;
+
+            }
+
+
+
+        }
+
+    </script>
+
+
+</body>
+
+</html>
