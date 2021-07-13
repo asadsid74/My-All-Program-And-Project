@@ -221,6 +221,22 @@
 					<button type="submit" class="btn btn-primary">Submit</button>
 					
 					</div>
+					
+				
 
 
 				</form>
+				
+				
+				<form action="prev" method="post">
+					<div class="container text-center">
+					<button type="submit" class="btn btn-primary" <a class="page-link" >Previous</a>></button>
+					
+					</div>
+				</form>
+				</div>
+				</div>
+				</div>
+				</body>
+				</html>
+			

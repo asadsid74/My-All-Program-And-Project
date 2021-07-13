@@ -78,14 +78,47 @@ public class AlumniController {
 	
 	
 	
-	@RequestMapping("/front-page")
+	@RequestMapping("/home")
 	public String frontPage() {
 		//System.out.println("success fully done");
-		return "front-page";
+		return "home";
+	}
+	
+	
+
+	@RequestMapping("/about")
+	public String aboutPage() {
+		System.out.println("this is about handler");
+		return "about";
+	}
+	
+	
+	@RequestMapping("/header")
+	public String headerPage() {
+		System.out.println("this is about handler");
+		return "header";
 	}
 	
 	
 	
 	
+	@RequestMapping("/alumni-form2")
+	public String alumniPage2() {
+		System.out.println("this is alumni form2 handler");
+		return "alumni-form2";
+	}
+	
+	
+	@RequestMapping("/loginn")
+	public String loginPage() {
+		System.out.println("this is alumni login  handler");
+		return "Login";
+	}
+	
+	@RequestMapping("/prev")
+	public String alumniPrev() {
+		System.out.println("this is alumni form prev page handler");
+		return "alumni-form";
+	}
 	
 }

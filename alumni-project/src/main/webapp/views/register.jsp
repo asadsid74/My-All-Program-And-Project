@@ -85,7 +85,7 @@ var name=document.getElementById("name").value;
 </script>
 
 <body style="background-color:#BFC9CA " >
-	
+	<li><a href="home"><strong>Click here for back</a></li></strong>
 	<div class="container">
 
 		<div class="row mt-5">

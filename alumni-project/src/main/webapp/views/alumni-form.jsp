@@ -10,7 +10,9 @@
 	crossorigin="anonymous">
 </head>
 <body style="background-color: #BFC9CA">
+<table>
 
+</table>
 	<div class="container">
 
 		<div class="row mt-5">

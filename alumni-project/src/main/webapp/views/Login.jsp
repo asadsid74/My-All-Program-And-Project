@@ -10,7 +10,7 @@
 	crossorigin="anonymous">
 </head>
 <body style="background-color:#F5EEF8" >
-	
+<%-- <jsp:include page="header"></jsp:include> --%>
 	<div class="container">
 
 		<div class="row mt-5">
@@ -75,7 +75,7 @@
 					
 					</div> -->
 					<a  href="alumni-form"><strong>click here for fill up  the form</strong></a></li>
-					
+					<li><a href="home"><strong>Click here for home page</a></li></strong>
 				</form>
 			<form action="alumni-form" method="post"></form>
 
