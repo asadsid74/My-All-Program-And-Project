@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<h1>Hey this is my itert page </h1>
+<h2>assalamu alaikum warahmatullahi wabarkatuh</h2>
+
+<h1 th:text=${data}></h1>
+
+<h1>Name of the owner is <span th:text=${data}></span></h1>
+
+<ul>
+<li th:each="n,status: ${data}">
+<h1 th:text= "${status.index}+'  '+  ${n}"></h1>
+<h1 th:text= "'hiii'+ ${status.count}+'  '+  ${n}"></h1>
+<h1 th:text= "' jii' +${status.size}+'  '+  ${n}"></h1>
+</li>
+</ul>
+
+</body>
+</html>

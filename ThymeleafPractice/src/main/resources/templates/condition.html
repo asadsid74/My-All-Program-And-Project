@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+
+	<h1>This is my condition html</h1>
+
+	<h2>
+		this is elvis oprator or ternory oprator<span
+			th:style="${active}?'color:green' : 'color:red'"
+			th:text=" ${active} ? 'ACTIVE' : 'NOT AVTIVE' "> </span>
+
+		<h1 th:if="${gender}=='M'">Male</h1>
+
+		<h1 th:if="${gender}=='F'">Female</h1>
+
+	</h2>
+
+
+	<div th:switch="${#lists.size(mylist)}">
+		<h2 th:case="'0'">in list there is no element</h2>
+		<h2 th:case="'1'">in list there is one element</h2>
+		<h2 th:case="*">in list theere is more than element</h2>
+	</div>
+</body>
+</html>
