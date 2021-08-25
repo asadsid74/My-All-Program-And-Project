@@ -24,7 +24,6 @@ public class StudentController {
 
 	@Autowired
 	private StudentRepo repo;
-	
 
 	private StudentService service;
 
@@ -32,51 +31,48 @@ public class StudentController {
 		super();
 		this.service = service;
 	}
-	
-	//create api save data
-	
+
+	// create api save data
+
 	@PostMapping()
-	 public ResponseEntity<Student> saveStudent(@RequestBody Student student){
-		return new ResponseEntity<Student>(service.saveStudent(student),HttpStatus.CREATED);
-		 
-	 }
-	
-	//get all data
+	public ResponseEntity<Student> saveStudent(@RequestBody Student student) {
+		return new ResponseEntity<Student>(service.saveStudent(student), HttpStatus.CREATED);
+
+	}
+
+	// get all data
 	@GetMapping()
-	public List<Student> getAllStu(){
+	public List<Student> getAllStu() {
 		return service.getAllStudent();
-		
+
 	}
-	
-	//get data by id
+
+	// get data by id
 	@GetMapping("{id}")
-	public Student getById(@PathVariable ("id")  Integer id) {
-	return service.getById(id); 
+	public Student getById(@PathVariable("id") Integer id) {
+		return service.getById(id);
 	}
-	
-	//get data by email
+
+	// get data by email
 	@GetMapping("/findbyemail/{email}")
-	public Student getByEmail(@PathVariable ("email") String email) {
+	public Student getByEmail(@PathVariable("email") String email) {
 		return service.findByEmail(email);
 	}
-	
-	
-	//update data by id of the name
+
+	// update data by id of the name
 	@PutMapping("/update-student/{id}")
-	public ResponseEntity <Student> updateStudent(@PathVariable ("id") Integer id,@RequestBody Student student) {
-		return new ResponseEntity<Student>(service.updateStudent(student, id),HttpStatus.OK);
-		
+	public ResponseEntity<Student> updateStudent(@PathVariable("id") Integer id, @RequestBody Student student) {
+		return new ResponseEntity<Student>(service.updateStudent(student, id), HttpStatus.OK);
+
 	}
-	
-	//delete data
-	
+
+	// delete data
+
 	@DeleteMapping("{id}")
-	public ResponseEntity<String> deleteStudent(@PathVariable ("id") Integer id){
+	public ResponseEntity<String> deleteStudent(@PathVariable("id") Integer id) {
 		service.deleteStudent(id);
 		return new ResponseEntity<String>("employee deleted successfully..", HttpStatus.OK);
-		
+
 	}
-	
-	
-	
+
 }

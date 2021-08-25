@@ -13,9 +13,8 @@ import com.example.repository.StudentRepo;
 @Service
 public class StudentServiceImpl implements StudentService {
 
-	
 	private StudentRepo repo;
-	
+
 	public StudentServiceImpl(StudentRepo repo) {
 		super();
 		this.repo = repo;
@@ -23,43 +22,43 @@ public class StudentServiceImpl implements StudentService {
 
 	@Override
 	public Student saveStudent(Student student) {
-		
+
 		return repo.save(student);
 	}
 
 	@Override
 	public List<Student> getAllStudent() {
-		
+
 		return repo.findAll();
 	}
 
 	@Override
 	public Student getById(Integer id) {
-		
-	 return repo.findById(id).orElseThrow();
+
+		return repo.findById(id).orElseThrow();
 	}
 
 	@Override
 	public Student findByEmail(String email) {
-		
+
 		return repo.findByEmail(email);
 	}
 
 	@Override
 	public Student updateStudent(Student student, Integer id) {
-		
-	Student stu= repo.findById(id).orElseThrow(()-> new ResourceNotFound("Student", "Id", id) );
-	
-	stu.setName(student.getName());
-	return repo.save(stu);
-		
+
+		Student stu = repo.findById(id).orElseThrow(() -> new ResourceNotFound("Student", "Id", id));
+
+		stu.setName(student.getName());
+		return repo.save(stu);
+
 	}
 
 	@Override
 	public void deleteStudent(Integer id) {
-	
-		repo.findById(id).orElseThrow(() ->new ResourceNotFound("Student", "Id", id));
-		
+
+		repo.findById(id).orElseThrow(() -> new ResourceNotFound("Student", "Id", id));
+
 		repo.deleteById(id);
 	}
 
